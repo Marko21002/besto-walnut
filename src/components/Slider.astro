@@ -1,0 +1,63 @@
+---
+
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>W3.CSS Slideshow</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <style>
+    .mySlides {display:none;}
+  </style>
+</head>
+<body>
+
+
+
+<div class="w3-content w3-display-container flex flex-col justify-center">
+  <img class="mySlides h-[450px] md:h-[650px]" src="shell.jpeg" >
+  <img class="mySlides h-[450px] md:h-[650px]" src="clean.jpg">
+  <img class="mySlides h-[450px] md:h-[650px]" src="ryka3.jpeg" >
+  <img class="mySlides h-[450px] md:h-[650px]" src="sklad.jpeg" >
+  <img class="mySlides h-[450px] md:h-[650px]" src="yadro.jpeg" >
+<div>
+    <button class="w3-button w3-black " id="prevBtn">&#10094;</button>
+  <button class="w3-button w3-blackt" id="nextBtn">&#10095;</button>
+</div>
+  
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var slideIndex = 1;
+  showDivs(slideIndex);
+
+  document.getElementById("prevBtn").addEventListener("click", function () {
+    plusDivs(-1);
+  });
+
+  document.getElementById("nextBtn").addEventListener("click", function () {
+    plusDivs(1);
+  });
+
+  function plusDivs(n) {
+    showDivs(slideIndex += n);
+  }
+
+  function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    if (n > x.length) { slideIndex = 1; }
+    if (n < 1) { slideIndex = x.length; }
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    x[slideIndex - 1].style.display = "block";
+  }
+});
+</script>
+
+</body>
+</html>
