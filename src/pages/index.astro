@@ -1,28 +1,25 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+// @ts-nocheck
 import Hero from '../components/Hero.astro';
 import About from '../components/About.astro';
 import Feature from '../components/Feature.astro';
-import Pricing from '../components/Pricing.astro'
-import Cta from '../components/Cta.astro'
-import Footer from '../components/Footer.astro'
-import Garden from '../components/Garden.astro'
+import Pricing from '../components/Pricing.astro';
+import Cta from '../components/Cta.astro';
+import Footer from '../components/Footer.astro';
 ---
-
-
 
 <!doctype html>
 <html lang="en" class="scroll-smooth">
 	<head>
 		<script async src="https://www.googletagmanager.com/gtag/js?id=AW-11463667568"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+		// @ts-ignore
+		<script is:inline>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
 
-  gtag('config', 'AW-11463667568');
-</script>
+		  gtag('config', 'AW-11463667568');
+		</script>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />	
@@ -32,8 +29,7 @@ import Garden from '../components/Garden.astro'
 		<meta name="google-site-verification" content="DxmeSRt18PvrHQ3bnX6UTaVFq-_OgZKX8L_7-VZk_uI" />
     <meta name="description" content="Explore the best wholesale deals on high-quality walnuts with Best Walnuts. From small to large orders, we offer premium nuts for your business. Contact us for competitive prices and prompt worldwide delivery.">
     <meta name="keywords" content="buy walnut,buy walnut europe,walnut wholesale, bulk walnuts, premium nuts, wholesale supplier, buy walnuts in bulk, Best Walnuts, high-quality walnuts, worldwide delivery">
-	<script async src="https://www.googletagmanager.com/gtag/js?id=AW-11463667568">
-	</script>
+		<script async src="https://www.googletagmanager.com/gtag/js?id=AW-11463667568"></script>
 	</head>
 	<body>
 		<Hero></Hero>
